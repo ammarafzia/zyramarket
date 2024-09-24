@@ -60,7 +60,7 @@ Nomor 5
 Fungsi ORM (Object-Relational Mapping) pada Django adalah untuk mempermudah pengembang dalam mengelola data di database dengan menggunakan konsep berorientasi objek. Dengan ORM, pengembang dapat bekerja dengan data sebagai objek Python, sementara Django akan memperbarui data dan mengubahnya menjadi perintah SQL yang dibutuhkan untuk berinteraksi dengan database. Ini memungkinkan pengembang untuk fokus pada logika aplikasi tanpa perlu memahami detail teknis SQL, sehingga membuat pengelolaan data menjadi lebih sederhana dan efisien.
 >>>>>>> c9a98a0327056b922b1a2dd2be5d20d0fc12cabe
 
-# UNTUK TUGAS 3 ADA DI MAIN 
+**UNTUK TUGAS 3 ADA DI MAIN**
 
 ____________________________________________TUGAS 4 ______________________________________________________________________________
 
