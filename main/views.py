@@ -38,7 +38,7 @@ def create_product(request):
         return redirect('main:show_main')
 
     context = {'form': form}
-    return render(request, "create_mood_entry.html", context)
+    return render(request, "create_product.html", context)
 
 def show_xml(request):
     data = Product.objects.all()
