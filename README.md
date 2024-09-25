@@ -1,3 +1,4 @@
+# Tugas 2
 Nomor 1
 
 **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).**
@@ -60,8 +61,8 @@ Nomor 5
 Fungsi ORM (Object-Relational Mapping) pada Django adalah untuk mempermudah pengembang dalam mengelola data di database dengan menggunakan konsep berorientasi objek. Dengan ORM, pengembang dapat bekerja dengan data sebagai objek Python, sementara Django akan memperbarui data dan mengubahnya menjadi perintah SQL yang dibutuhkan untuk berinteraksi dengan database. Ini memungkinkan pengembang untuk fokus pada logika aplikasi tanpa perlu memahami detail teknis SQL, sehingga membuat pengelolaan data menjadi lebih sederhana dan efisien.
 >>>>>>> c9a98a0327056b922b1a2dd2be5d20d0fc12cabe
 
-____________________________________________________________TUGAS 3____________________________________________________________
-
+# Tugas 3
+______________________________________________________________________________________________________________
 **Nomor1**
 
 **Mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?**
@@ -174,8 +175,8 @@ http://localhost:8000/json/[id]/
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/2d97e0d2-dd5d-4f85-b366-6d317f7da36f">
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/b1176616-646b-4522-824f-f6a0e4e85e32">
 
-
-____________________________________________TUGAS 4 ______________________________________________________________________________
+# Tugas 4
+__________________________________________________________________________________________________________
 
 **Nomor1**
 
@@ -249,6 +250,13 @@ Fungsi log out
 
 **Setelah semua sudah berjalan lancar, website sudah bisa digunakan dengan baik**
 
+berikut tampilan yang di local: 
+
+![Screenshot 2024-09-25 083908](https://github.com/user-attachments/assets/12c30ce9-72ea-41e0-91cf-5829b2eb07a1)
+
+berikut tampilang yang di pws : 
+
+![Screenshot 2024-09-25 083931](https://github.com/user-attachments/assets/1b834f2d-10e5-4915-af85-ff0ecc8bb0bc)
 
 
 
