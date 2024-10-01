@@ -145,6 +145,100 @@ berikut tampilang yang di pws :
 
 ![Screenshot 2024-09-25 083931](https://github.com/user-attachments/assets/1b834f2d-10e5-4915-af85-ff0ecc8bb0bc)
 
+___________________________________________________________________________________________________________________________________________
+# Tugas 5
+
+**Nomor1**
+
+**Jika terdapat beberapa CSS selector untuk suatu elemen HTML, jelaskan urutan prioritas pengambilan CSS selector tersebut!**
+
+CSS berfungsi untuk mengatur tampilan elemen HTML, sebelumnya perlu tahu mana aturan yang harus diutamakan jika ada beberapa selector yang ada di elemen yang sama. Pertama, inline styles  karena ditulis langsung di dalam HTML dengan atribut “style” seperti kode ini h1 style="color: red;"Hello, World!/h1,  jadinya inline styles ini langsung berhubungan dengan elemen tersebut, cara kerja ini lebih spesifik dibandingkan dengan selector yang langsung tertuju pada elemen yang sama melalui ID, class dan tag. Kedua, ID Selector karena setiap ID harus unik dalam satu halaman, maka akan pengaruh. Lalu ada class dan Element Selector seperti (h1, p, div)
+
+**Nomor2**
+
+**Mengapa responsive design menjadi konsep yang penting dalam pengembangan aplikasi web? Berikan contoh aplikasi yang sudah dan belum menerapkan responsive design!**
+
+Konsep dari responsive design penting karena memastikan tampilan seperti tata letaknya sesuai dengan ukuran perangkat yang digunakan dan fungsi dari sebuah situs dapat sempurna dengan ukuran layar dan perangkat. Pengembangan satu situs yang responsif lebih hemat waktu dan biaya dibandingkan membuat versi terpisah untuk setiap perangkat, sehingga aksesibilitasnya lebih luas tanpa mengorbankan fungsionalitas.
+
+Contoh aplikasi sesudah menerapkan Responsive Design, Aplikasi instagram dan Airbnb karena Aplikasi ini memiliki desain yang responsif di versi webnya. Ketika dibuka di desktop atau mobile browser, tampilan web akan otomatis menyesuaikan dengan ukuran layar perangkat yang digunakan, memastikan gambar, teks, dan konten lain tetap terlihat jelas dan mudah diakses.
+
+Contoh aplikasi sebelum menerapkan Responsive Design, ______________
+
+
+**Nomor3**
+
+**Jelaskan perbedaan antara margin, border, dan padding, serta cara untuk mengimplementasikan ketiga hal tersebut!**
+
+Margin adalah ruang kosong di luar elemen yang berfungsi untuk mengatur di luar elemen, yang memisahkan elemen tersebut dari elemen lain di sekitarnya. Margin mendorong elemen lain menjauh. Margin tidak memiliki warna dan benar-benar transparan. 
+Border adalah garis yang mengelilingi elemen di antara padding dan margin yang berfungsi untuk menentukan ketebalan, gaya dan warna border.
+adding adalah ruang di dalam elemen, yang terletak antara konten elemen (misalnya teks atau gambar) dengan border-nya. Padding menciptakan jarak antara isi elemen dengan tepi dalam elemen tersebut. Padding bisa memiliki warna yang sama dengan latar belakang elemen.
+
+
+Ketika mengatur elemen, margin, border, dan padding saling bekerja sama untuk menentukan bagaimana elemen tersebut diposisikan dalam halaman.
+.element { 
+margin: 20px;  → Memberikan jarak antara elemen dengan elemen lain di luar batas elemen.
+border: 2px solid red; → Menambahkan garis batas di sekitar elemen
+padding: 10px; → Menambahkan jarak di dalam elemen di antara konten dan batas border. 
+}
+
+**Nomor4**
+
+**Jelaskan konsep flex box dan grid layout beserta kegunaannya!**
+
+Flex box adalah sistem tata letak satu dimensi yang pengaturan elemen dalam baris atau kolom dengan cara fleksibel, bisa horizontal maupun vertikal, dengan menggunakan “display: flex;” yang berfungsi untuk mengaktifkan flexbox dan “flex-direction” untuk menentukan arah tata letak. Sedangkan Grid Layout adalah sistem  tata letak dua dimensi yang pengaturan elemen dalam baris dan kolom, ideal untuk menciptakan struktur yang lebih kompleks seperti header, sidebar, dan konten utama. Dengan menggunakan “display: grid;” dan “grid-template-columns” serta “grid-template-rows”, yang berfungsi untuk menentukan ukuran kolom dan baris yang dibutuhkan.
+
+
+**Nomor5**
+
+**Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!**
+
+
+**Menambahkan fungsi edit dan delete product**
+
+Fungsi edit_product
+
+- Di dalam file views.py, buat fungsi baru yang berfungsi untuk pengeditan produk. Membuat fungsi edit_product yang menerima ID produk dan request sebagai parameter.
+- Dalam view ini, ambil data produk dari database berdasarkan ID dan buat form yang sudah terisi dengan data produk yang ada.
+- Redirect ke halaman daftar produk setelah berhasil mengedit.
+- Di url.py tambahkan import yang sudah fungsi nya
+   
+Fungsi delete_product
+
+- Di dalam file view.py, buat fungsi baru yang berfungsi untuk menghapus produk. 
+- Dalam view ini, ambil data produk dari database berdasarkan ID dan buat form yang sudah terisi dengan data produk yang ada.
+- Redirect ke halaman daftar produk setelah berhasil menghapus.
+- Di url.py tambahkan import yang sudah fungsi nya  
+
+
+
+**Menambahkan  tailwind**
+
+- Di dalam base.html pada subdirektori templates, tambahkan  <meta name="viewport"> dan nambahkan juga  kode untuk menyambungkan  template django dengan tailwind 
+- Di dalam setting.py pada MIDDLEWARE 'whitenoise.middleware.WhiteNoiseMiddleware', dan merubah variabel seperti dibawah ini
+  
+STATIC_URL = '/static/'
+if DEBUG:
+   STATICFILES_DIRS = [
+       BASE_DIR / 'static' # merujuk ke /static root project pada mode development
+   ]
+else:
+   STATIC_ROOT = BASE_DIR / 'static'
+   
+- Setelah itu, buat folder baru yang bernama static di dalamnya terdapat folder CSS yang berisi file global.css
+
+**Membuat Desain Halaman Daftar Product**
+
+- Pada login.html dan register.html,Edit halaman login dan register dengan menambahkan elemen yang menarik tata letak yang bagus dan mengganti warna sesuai yang menarik.
+- Tambahkan tombol "Edit" dan "Hapus" di setiap card produk yang memanggil fungsi yang sesuai saat diklik.
+
+**Membuat Navigation Bar (Navbar)**
+
+- Buat file baru navbar. Html untuk navigation bar di template utama.
+- Tambahkan menu untuk fitur-fitur aplikasi seperti home, add product, login, logout dan tulisan welcome “user” dan pastikan navbar dapat berubah menjadi tampilan mobile ketika ukuran layar kecil.
+- Buat tampilan untuk navbar mobile yang dapat digunakan ketika tombol diklik.
+- Coba untuk menjalankan dan akses link ini http://localhost:8000/. Jika semua sudah sesuai dengan desain yang diinginkan sudah selesai .
+
+Setelah semua sudah berjalan lancar, website sudah bisa digunakan dengan baik 
 
 
 
