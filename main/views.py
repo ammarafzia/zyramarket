@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect 
+from django.shortcuts import render,redirect, reverse
 from main.forms import ProductForm
 from main.models import Product
 from django.http import HttpResponse
@@ -16,7 +16,9 @@ from django.urls import reverse
 @login_required(login_url='/login')
 def show_main(request):
     product_entries = Product.objects.filter(user=request.user)
+    print(product_entries)
     context = {
+        'npm' : '2306245844',
         'app_store' : 'zyramarket',
         'name': request.user.username,
         'class': 'PBP B',
@@ -32,9 +34,9 @@ def create_product(request):
     form = ProductForm(request.POST or None)
 
     if form.is_valid() and request.method == "POST":
-        mood_entry = form.save(commit=False)
-        mood_entry.user = request.user
-        mood_entry.save()
+        product_entry = form.save(commit=False)
+        product_entry.user = request.user
+        product_entry.save()
         return redirect('main:show_main')
 
     context = {'form': form}
@@ -90,3 +92,24 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('main:login'))
     response.delete_cookie('last_login')
     return response
+
+def edit_product(request, id): 
+    Product_edit = Product.objects.get(pk = id)
+    form = ProductForm(request.POST or None, instance=Product_edit)
+
+    if form.is_valid() and request.method == "POST":
+        # Simpan form dan kembali ke halaman awal
+        form.save()
+        return HttpResponseRedirect(reverse('main:show_main'))
+
+    context = {'form': form}
+    return render(request, "edit_product.html", context)
+
+def delete_product(request, id):
+    Product_delete = Product.objects.get(pk = id)
+    Product_delete.delete()
+    # Kembali ke halaman awal
+    return HttpResponseRedirect(reverse('main:show_main'))
+
+
+    
