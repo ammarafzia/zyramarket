@@ -1,3 +1,4 @@
+# Tugas 2
 Nomor 1
 
 **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).**
@@ -61,8 +62,8 @@ Fungsi ORM (Object-Relational Mapping) pada Django adalah untuk mempermudah peng
 >>>>>>> c9a98a0327056b922b1a2dd2be5d20d0fc12cabe
 
 **UNTUK TUGAS 3 ADA DI MAIN**
-
-____________________________________________TUGAS 4 ______________________________________________________________________________
+____________________________________________________________________________________________________________________________________
+# Tugas 4
 
 **Nomor1**
 
@@ -74,7 +75,7 @@ httpResponseRedirect () adalah kelas yang mengembalikan respons HTTP dengan stat
 
 **Jelaskan cara kerja penghubungan model Product dengan User!**
 
-Model product sebagai produk produk yang ditawarkan dalam web, yang biasa berisi atribut nama produk, deskripsi produk dan harga produk 
+Model product sebagai produk yang terdapat di dalam web, yang biasa berisi atribut nama produk, deskripsi produk dan harga produk 
 Model user sebagai pengguna dari web, yang biasanya sudah disediakan oleh django seperti “from django.contrib.auth.models” yang berfungsi untuk mengelola data pengguna, seperti username, email dan password. 
 penghubungan model product dengan user dalam django melalui ForeignKey atau bisa dengan tipe lain seperti OneToOneField dan ManyToManyField. Pada model product, bisa memiliki field user dengan tipe ForeignKey yang terhubung ke model user, pada kode “on_delete=models.CASCADE” akan memastikan bahwa jika dihapus, maka produk yang terkait dengan pengguna juga akan ikut terhapus secara otomatis 
 
@@ -92,7 +93,7 @@ Dalam implementasi django untuk autentikasi, Django  menggunakan fungsi authenti
 
 **Bagaimana Django mengingat pengguna yang telah login? Jelaskan kegunaan lain dari cookies dan apakah semua cookies aman digunakan?**
 
-Django dapat menyimpan data pengguna di dalam cookies yang dapat diakses pada requests selama waktu yang ditentukan. Ketika berhasil login, Django membuat sesi untuk pengguna, yang berisi informasi tentang status login. Django kemudian mengirimkan cookie yang berisi ID sesi kepada browser pengguna. Cookie ini memungkinkan Django untuk mengidentifikasi pengguna yang sama di kunjungan berikutnya tanpa perlu meminta mereka untuk login lagi, selama cookie tersebut masih valid.
+Django dapat menyimpan data pengguna di dalam cookies yang dapat diakses pada requests selama waktu yang ditentukan. Ketika berhasil login, Django membuat login untuk pengguna, yang berisi informasi tentang status login. Django kemudian mengirimkan cookie yang berisi ID sesi kepada browser pengguna. Cookie ini memungkinkan Django untuk mengidentifikasi pengguna yang sama di kunjungan berikutnya tanpa perlu meminta mereka untuk login lagi, selama cookie tersebut masih valid.
 Cookies memiliki beberapa kegunaan lain, seperti cookies bisa melacak aktivitas pengguna di situs web, menyimpan informasi tentang barang barang yang ditambahkan ke keranjang belanja, sehingga bisa melanjutkan belanja di lain waktu dan cookies juga menyimpan pilihan pengguna, seperti bahasa atau tema yang ingin digunakan.
 Cookies memang memiliki banyak kegunaan, tapi tidak semua cookies aman digunakan. misalnya , Third-Party Cookies yang akan melacak aktivitas pengguna secara online dan menampilkan iklan yang tidak relevan, serta mengganggu privasi pengguna
 
@@ -121,7 +122,7 @@ Fungsi log out
 - Tambahkan juga file html dan path() di urlpatterns  
 
 **Mengontrol user untuk masuk ke home sebelum login**
-- Di dalam view.py, tambahkan import untuklogin_required dan tambahkan @login_required pada fungsi yang menampilkan halaman utama agar hanya pengguna yang terverifikasi yang dapat mengaksesnya.
+- Di dalam view.py, tambahkan import untuk login_required dan tambahkan @login_required pada fungsi yang menampilkan halaman utama agar hanya pengguna yang terverifikasi yang dapat mengaksesnya.
 - Coba untuk menjalankan proyek django dan akses link http://localhost:8000/. Disini saya bisa menambahkan data yang baru ingin saya masukan dan memeriksa apakah semua tombol login, register dan logout bisa digunakan dengan baik.
 
 **Menghubungkan model product dengan user**
@@ -135,5 +136,18 @@ Fungsi log out
 -  Melihat data terakhir log out, bisa menambahkan kode  "terakhir login: {{ last_login }}" di dalam main.html
 
 **Setelah semua sudah berjalan lancar, website sudah bisa digunakan dengan baik**
+
+berikut tampilan yang di local: 
+
+![Screenshot 2024-09-25 083908](https://github.com/user-attachments/assets/12c30ce9-72ea-41e0-91cf-5829b2eb07a1)
+
+berikut tampilang yang di pws : 
+
+![Screenshot 2024-09-25 083931](https://github.com/user-attachments/assets/1b834f2d-10e5-4915-af85-ff0ecc8bb0bc)
+
+
+
+
+
 
 
