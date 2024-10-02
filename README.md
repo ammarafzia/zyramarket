@@ -162,7 +162,7 @@ Konsep dari responsive design penting karena memastikan tampilan seperti tata le
 
 Contoh aplikasi sesudah menerapkan Responsive Design, Aplikasi instagram dan Airbnb karena Aplikasi ini memiliki desain yang responsif di versi webnya. Ketika dibuka di desktop atau mobile browser, tampilan web akan otomatis menyesuaikan dengan ukuran layar perangkat yang digunakan, memastikan gambar, teks, dan konten lain tetap terlihat jelas dan mudah diakses.
 
-Contoh aplikasi sebelum menerapkan Responsive Design, ______________
+Contoh aplikasi sebelum menerapkan Responsive Design,Situs Web Sekolah Tertentu Banyak sekolah (terutama yang memiliki situs lama) karena belum menerapkan responsive design, situs ini cenderung hanya dioptimalkan untuk tampilan desktop.
 
 
 **Nomor3**
