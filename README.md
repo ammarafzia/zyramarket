@@ -241,7 +241,41 @@ else:
 Setelah semua sudah berjalan lancar, website sudah bisa digunakan dengan baik 
 
 
+___________________________________________________________________________________________________________________________
+# Tugas 6
 
+**Nomor1**
+
+**Jelaskan manfaat dari penggunaan JavaScript dalam pengembangan aplikasi web!**
+
+javaScript punya peran besar dalam pengembangan aplikasi web karena membuat halaman web jadi lebih menarik dan responsif. Dengan javascript, data bisa diproses langsung di browser pengguna tanpa harus terus menerus mengirim data ke server dan menunggu balasan dari server setiap kali pengguna melakukan sesuatu. JavaScript juga bisa digunakan di backend lewat node.js, jadi pengembangan bisa pakai satu bahasa saja untuk semuanya, baik pada bagian sisi server maupun di frontend. Selain itu, javaScript didukung semua browser, sehingga aplikasi bisa digunakan dari berbagai perangkat (laptop, smartphone) tanpa khawatir tampilan atau fungsinya rusak. JavaScript juga ada banyak library dan framework *seperti react* dan *Angular* yang membuat proses pengembangannya lebih cepat dan lebih baik.
+
+**Nomor2**
+
+ **Jelaskan fungsi dari penggunaan await ketika kita menggunakan fetch()! Apa yang akan terjadi jika kita tidak menggunakan await?**
+ 
+Fungsi penggunaan await saat menggunakan fetch() adalah untuk menunggu proses proses asinkronus selesai sebelum melanjutkan ke baris kode berikutnya. fetch () akan mengembalikan Promises, yang berfungsi untuk melakukan operasi secara asinkronus(),  [ asinkronus () → yang berarti operasi tersebut dilakukan tanpa menghentikan aktivitas utama atau interaksi yang sedang berjalan] seperti mengambil data dari server. 
+Dengan await, javaScript akan menunggu hingga fetch() selesai dan mengembalikan hasilnya, sehingga bisa langsung bekerja dengan data tersebut setelahnya. 
+Jika kita tidak menggunakan await saat memanggil fetch(), program akan melanjutkan eksekusi tanpa menunggu hasil fetch(). Akibatnya, kita mungkin mencoba mengakses data dari respons yang belum diterima, yang bisa mengakibatkan kesalahan, misalnya data undefined atau Promise belum terpecahkan. Ini bisa menyebabkan bug, terutama jika kode berikutnya bergantung pada hasil dari operasi asynchronous tersebut.
+
+**Nomor3**
+
+ **Mengapa kita perlu menggunakan decorator csrf_exempt pada view yang akan digunakan untuk AJAX POST?**
+ 
+Berguna karena mekanisme Cross-Site Request Forgery (CSRF) di Django secara default memeriksa token CSRF pada setiap permintaan POST untuk mencegah serangan CSRF, dimana bisa juga mengirimkan permintaan berbahaya atas nama pengguna yang sedang login.  Kita perlu menggunakan decorator csrf_exempt pada view yang akan digunakan untuk AJAX POST karena secara default Django memiliki mekanisme keamanan yang disebut Cross-Site Request Forgery (CSRF) protection. Mekanisme ini mencegah serangan CSRF di mana seorang penyerang bisa mengirimkan permintaan berbahaya atas nama pengguna yang sedang login.
+Ketika menggunakan AJAX untuk mengirim POST request ke server, Django secara otomatis akan memeriksa apakah request tersebut menyertakan CSRF token yang valid,  jika CSRF token tidak disertakan atau tidak diatur dengan benar, Django akan menolak request tersebut sebagai tindakan perlindungan.
+Dengan menggunakan  decorator csrf_exempt berfungsi untuk menonaktifkan pengecekan token CSRF untuk view tertentu, sehingga permintaan AJAX POST dapat dijalankan tanpa pemeriksaan CSRF, yang berguna untuk API atau endpoint yang tidak perlu dilindungi oleh mekanisme CSRF.
+
+**Nomor4**
+
+ **Pada tutorial PBP minggu ini, pembersihan data input pengguna dilakukan di belakang (backend) juga. Mengapa hal tersebut tidak dilakukan di frontend saja?**
+ 
+Pembersihan data yang hanya mengandalkan frontend  saja tidak cukup aman karena kode frontend bisa di salah gunakan oleh pengguna atau orang lain yang berniat jahat. Jika hanya ingin mengandalkan pembersihan di frontend, pengguna dapat memastikan validasi pada sisi klien dan mengirimkan data yang tidak valid atau berbahaya langsung ke server.
+Dengan membersihkan dan memvalidasi data di backend, kita dapat memastikan bahwa data yang masuk ke sistem selalu sesuai, untuk melindungi aplikasi dari berbagai serangan, seperti injection (misalnya SQL injection atau XSS) dan data tampering, yang dapat merusak atau mengekspos data penting.
+
+**Nomor5**
+
+ **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!**
 
 
 
