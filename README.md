@@ -277,5 +277,30 @@ Dengan membersihkan dan memvalidasi data di backend, kita dapat memastikan bahwa
 
  **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!**
 
+ Memperbarui Fungsi Login:
+ 
+-  Di dalam file views.py, pertama mengupdate fungsi login_user untuk menambahkan pesan error ketika proses login gagal.
+  
+Menambahkan Produk dengan AJAX GET:
 
+- Pertama menambahkan import pada views.py seperti, from django.views.decorators.csrf import csrf_exempt, require_POST
+- Pada Views.py, membuat fungsi baru bernama add_product_by_ajax, yang menerima parameter request. Fungsi ini bertugas untuk menangani penambahan produk melalui AJAX.
+- Selanjutnya, di file urls.py, menambahkan path yang sesuai untuk fungsi add_product_by_ajax agar dapat diakses melalui URL.
+  
+Mengambil Produk Menggunakan AJAX:
 
+- Di dalam file main.html, tambahkan elemen **<div id="product_card"></div>** untuk menampilkan kartu produk.
+- Dengan menggunakan metode fetch untuk membuat permintaan GET yang akan mengambil data produk dari server. Fungsi ini didefinisikan dalam skrip JavaScript dengan nama getProductEntries, yang memanggil URL dengan menggunakan {% url 'main:show_json' %} dan mengonversi respons menjadi JSON.
+  
+Membuat Modal untuk Menambahkan Produk:
+
+- Tambahkan kode untuk modal yang digunakan untuk menambahkan produk baru di main.html. Modal ini berisi formulir dengan input untuk nama, harga, deskripsi, dan stok produk.
+Modal juga memiliki tombol untuk menutup dan mengirim data formulir. **Event listener** ditambahkan untuk menangani pembukaan modal dan pengiriman formulir dan Tambahkan **event listener** untuk form, yang akan mengirimkan data ke server saat di submit.
+
+Menambahkan Product Menggunakan AJAX POST:
+
+- Dengan membuat modal baru dengan tombol untuk menambahkan product, yang juga memiliki input untuk memasukkan product baru.
+- Di dalam views, membuat fungsi untuk memeriksa apakah pengguna sudah login, mengambil data product dari permintaan POST, dan menyimpannya ke basis data. Fungsi ini mengembalikan respons JSON untuk menunjukkan keberhasilan atau kegagalan.
+-  Lalu tambahkan  path di urls.py untuk mengarahkan ke fungsi yang baru dibuat.
+-  Terakhir, menghubungkan formulir dalam modal dengan AJAX untuk mengirim data product baru saat tombol submit ditekan, dengan memastikan token CSRF ditambahkan untuk keamanan. Setelah berhasil, modal ditutup dan input dibersihkan. Jika gagal, pesan error ditampilkan.
+-  Setelah semua sudah berjalan lancar, website sudah bisa digunakan dengan baik 
